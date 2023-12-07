@@ -419,6 +419,10 @@ z-index: 2;
     height: auto !important;
 }
 
+.slick-track{
+    width: 100% !important;
+}
+
 .home-div-card {
     background-color: #fff;
     transition: .3s ease;

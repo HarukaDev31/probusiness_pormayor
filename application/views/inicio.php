@@ -44,13 +44,13 @@
   <?php
   if($arrCategorias['status']=='success'){
   ?>
-  <div class="container mb-2">
+  <div class="container mb-2 mt-5">
     <div class="carro px-2">
       <?php $iCounter = 0;
       foreach($arrCategorias['result'] as $row) {
         if ( $iCounter == 6 ) break; ?>
-          <div class="px-2 div-categoria_a">
-            <a href="<?php echo base_url(); ?>categoria/<?php echo urlencode($row->No_Familia); ?>/0/<?php echo $row->ID_Familia; ?>/0/0/1/0/relevance">
+          <div class="px-2 me-3 div-categoria_a">
+            <a class="text-decoration-none" href="<?php echo base_url(); ?>categoria/<?php echo urlencode($row->No_Familia); ?>/0/<?php echo $row->ID_Familia; ?>/0/0/1/0/relevance">
               <div class="alto-fijo radius">
                 <div class="bg-white radius template-categoria-inicio template-categoria-size template-box_shadow">
                     <?php if (!empty($row->No_Imagen_Url_Categoria)) { ?>
@@ -90,13 +90,15 @@
       //array_debug($arrBanner);
       //array_debug($arrImportacionGrupalProducto);
     ?>
-      <h1 class="text-center fw-bold mb-4"><?php echo $arrImportacionGrupalProducto[0]->No_Importacion_Grupal; ?></h1>
-      <p class="text-center lead mb-5">
-        ☑️ <strong>Fecha de Apertura:</strong> <?php echo ToDateBD($arrImportacionGrupalProducto[0]->Fe_Inicio); ?><br>
-        ☑️ <strong>Fecha de Cierre:</strong> <?php echo ToDateBD($arrImportacionGrupalProducto[0]->Fe_Fin); ?>
-        <br>
-        <?php echo nl2br($arrImportacionGrupalProducto[0]->Txt_Importacion_Grupal); ?>
-      </p>
+      <div class="d-none">
+        <h1 class="text-center fw-bold mb-4"><?php echo $arrImportacionGrupalProducto[0]->No_Importacion_Grupal; ?></h1>
+        <p class="text-center lead mb-5">
+          ☑️ <strong>Fecha de Apertura:</strong> <?php echo ToDateBD($arrImportacionGrupalProducto[0]->Fe_Inicio); ?><br>
+          ☑️ <strong>Fecha de Cierre:</strong> <?php echo ToDateBD($arrImportacionGrupalProducto[0]->Fe_Fin); ?>
+          <br>
+          <?php echo nl2br($arrImportacionGrupalProducto[0]->Txt_Importacion_Grupal); ?>
+        </p>
+      </div>
 
       <!-- diseño de item -->
       <?php foreach ($arrImportacionGrupalProducto as $row) { ?>
