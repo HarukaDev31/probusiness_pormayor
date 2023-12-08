@@ -70,7 +70,7 @@
               <!-- hr -->
               <hr class="my-6">
               <div class="mt-3 row justify-content-start g-2 align-items-center">
-                <div class="row">
+                <div class="row row p-0">
                   <div class="ps-3 pe-3 pb-2 pb-sm-0 col-12 col-sm-6 col-md-6 col-xl-6 number-input md-number-input item-unitario">
                     <!-- background: #92dda9; --><button style="width: 30%; height: auto; " class="border bg-light plus" onclick="subir(<?php echo $item->ID_Producto . $item->ID_Unidad_Medida; ?>)"><i style="font-size: .5rem;" class="fas fa-plus"></i></button>
                     <input style="width: 40%;" onkeyup="validateStockNow(event);" inputmode="numeric" class="text-center input-cantidad_item input-decimal form-control" id="input_cantidad_item-<?php echo $item->ID_Producto . $item->ID_Unidad_Medida; ?>" data-id_item="<?php echo $item->ID_Producto . $item->ID_Unidad_Medida; ?>" data-cantidad_item_minima="<?php echo $item->cantidad_item; ?>" value="<?php echo $item->cantidad_item; ?>">
