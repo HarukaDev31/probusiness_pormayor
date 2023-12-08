@@ -54,7 +54,7 @@
         //$row->No_Imagen_Url_Categoria = 'https://images.falabella.com/v3/assets/bltf4ed0b9a176c126e/bltf0da18330b0710bd/6564d1a4867c0b7a80389712/CAT-02-DK-Jugueteria-221123-RN.jpg?disable=upscale&format=webp&quality=70&width=1280';
         if ( $iCounter == 6 ) break; ?>
           <div class="px-2 me-3 div-categoria_a">
-            <a class="text-decoration-none" href="<?php echo base_url(); ?>categoria/<?php echo urlencode($row->No_Familia); ?>/0/<?php echo $row->ID_Familia; ?>/0/0/1/0/relevance">
+            <a class="text-decoration-none" href="<?php echo base_url("categoria/" . $row->ID_Familia . "/" . urlencode($row->No_Familia)); ?>">
               <div class="alto-fijo radius">
                 <div class="rounded-circle bg-white radius template-categoria-inicio template-categoria-size template-box_shadow">
                   <img class="rounded-circle img-categoria-size" src="<?php echo $row->No_Imagen_Url_Categoria; ?>?nocache=<?php echo $row->Nu_Version_Imagen; ?>" alt="<?php echo $row->No_Familia; ?>">
@@ -86,27 +86,14 @@
     <?php
     if ($arrImportacionGrupalProducto['status'] == 'success') {
       $arrImportacionGrupalProducto = $arrImportacionGrupalProducto['result'];
-
-      //array_debug($arrBanner);
-      //array_debug($arrImportacionGrupalProducto);
     ?>
-      <div class="d-none">
-        <h1 class="text-center fw-bold mb-4"><?php echo $arrImportacionGrupalProducto[0]->No_Importacion_Grupal; ?></h1>
-        <p class="text-center lead mb-5">
-          ☑️ <strong>Fecha de Apertura:</strong> <?php echo ToDateBD($arrImportacionGrupalProducto[0]->Fe_Inicio); ?><br>
-          ☑️ <strong>Fecha de Cierre:</strong> <?php echo ToDateBD($arrImportacionGrupalProducto[0]->Fe_Fin); ?>
-          <br>
-          <?php echo nl2br($arrImportacionGrupalProducto[0]->Txt_Importacion_Grupal); ?>
-        </p>
-      </div>
-
       <!-- diseño de item -->
       <div class="row">
         <?php foreach ($arrImportacionGrupalProducto as $row) {
         //comentar
         //$row->No_Imagen_Item = 'https://intranet.probusiness.pe/assets/images/productos/20603287721/SCOOTER_ELECTRICO__01pn3.png';
         ?>
-          <div class="col-6 col-sm-4">
+          <div class="col-6 col-sm-3">
             <a class="text-decoration-none text-black" href="<?php echo base_url("products/" . $row->ID_Producto . "/" . urlencode($row->No_Producto)); ?>">
               <div class="card border-0 rounded shadow-sm mt-3 p-3">
                 <img src="<?php echo $row->No_Imagen_Item; ?>" class="img-thumbnail border-0 float-start" alt="<?php echo urlencode($row->No_Producto); ?>">

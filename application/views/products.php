@@ -1,5 +1,5 @@
 <main><br><br>
-  <div class="mt-5">
+  <div class="mt-4 mt-sm-5">
     <div class="container">
         <!-- row -->
         <div class="row">
