@@ -133,8 +133,12 @@ class Inicio extends CI_Controller {
 			$responseItemCartShopActual = searchForIdItem($_SESSION['cart'], $id);
 
 			$result['status'] = 'success';
-			$result['id_item'] = $responseItemCartShopActual['id_item'];//id por item
-			$result['count_item'] = $responseItemCartShopActual['cantidad_item'];//cantidad por item
+
+			if(!empty($responseItemCartShopActual)) {
+				$result['id_item'] = $responseItemCartShopActual['id_item'];//id por item
+				$result['count_item'] = $responseItemCartShopActual['cantidad_item'];//cantidad por item
+			}
+
 			$result['count'] = countBooks($_SESSION['cart']);
 			$result['total_item'] = amountBooks($_SESSION['cart']);
 		} else {
