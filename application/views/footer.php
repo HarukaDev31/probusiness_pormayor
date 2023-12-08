@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 
     <?php if (!isset($js_voucher)) { ?>
-      <script src="<?php echo base_url("assets/js/inicio.js?ver=72.0.0"); ?>"></script>
+      <script src="<?php echo base_url("assets/js/inicio.js?ver=73.0.0"); ?>"></script>
       <script type="text/javascript" src="<?php echo base_url("assets/slick/slick.min.js?ver=14.0.14"); ?>"></script>
     <?php } ?>
 

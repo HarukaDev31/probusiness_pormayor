@@ -571,10 +571,10 @@ function modalCartShop(){
 
           $('#modal-footer_total').html('');
   
-          sHmtlModalCartShopSinItem += '<div class="container py-5 px-5 text-center">';
-            sHmtlModalCartShopSinItem += '<i class="mb-3 fa-solid fa-cart-shopping fa-3x"></i><br>';
+          sHmtlModalCartShopSinItem += '<div class="container py-5 text-center" style="padding-top: 10rem !important;">';
+            sHmtlModalCartShopSinItem += '<i class="mb-3 fa-solid fa-bag-shopping fa-4x"></i><br>';
             sHmtlModalCartShopSinItem += '<h6><span class="fw-semibold">Tu carrito de compras está vacío</span></h6>';
-            sHmtlModalCartShopSinItem += '<a type="button" href="' + base_url + '" rel="noopener noreferrer" class="mt-3 btn btn-primary">Seguir a comprando</a>';
+            sHmtlModalCartShopSinItem += '<a type="button" href="' + base_url + '" rel="noopener noreferrer" class="mt-3 btn btn-success btn-lg">Seguir a comprando</a>';
           sHmtlModalCartShopSinItem += '</div>';
         
           $('#modal-cart-items').html(sHmtlModalCartShopSinItem);
@@ -584,10 +584,10 @@ function modalCartShop(){
 
         $('#modal-footer_total').html('');
 
-        sHmtlModalCartShopSinItem += '<div class="container py-5 px-5 text-center">';
-          sHmtlModalCartShopSinItem += '<i class="mb-3 fa-solid fa-cart-shopping fa-3x"></i><br>';
+        sHmtlModalCartShopSinItem += '<div class="container py-5 text-center" style="padding-top: 10rem !important;">';
+          sHmtlModalCartShopSinItem += '<i class="mb-3 fa-solid fa-bag-shopping fa-4x"></i><br>';
           sHmtlModalCartShopSinItem += '<h6><span class="fw-semibold">Tu carrito de compras está vacío</span></h6>';
-          sHmtlModalCartShopSinItem += '<a type="button" href="' + base_url + '" rel="noopener noreferrer" class="mt-3 btn btn-primary">Seguir a comprando</a>';
+          sHmtlModalCartShopSinItem += '<a type="button" href="' + base_url + '" rel="noopener noreferrer" class="mt-3 btn btn-success btn-lg">Seguir a comprando</a>';
         sHmtlModalCartShopSinItem += '</div>';
       
         $('#modal-cart-items').html(sHmtlModalCartShopSinItem);
