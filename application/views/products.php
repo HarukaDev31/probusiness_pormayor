@@ -8,10 +8,10 @@
               <!-- breadcrumb -->
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Bakery Biscuits</a></li>
+                    <li class="breadcrumb-item"><a href="<?php echo base_url('inicio'); ?>">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="#"><?php echo $item->No_Familia; ?></a></li>
 
-                    <li class="breadcrumb-item active" aria-current="page">Napolitanke Ljesnjak</li>
+                    <li class="breadcrumb-item active" aria-current="page"><?php echo $item->No_Producto; ?></li>
                 </ol>
               </nav>
           </div>
@@ -26,9 +26,7 @@
   <section class="mt-4">
     <div class="container">
         <div class="row">
-          <div class="col-md-6">
-            <!--<img src="<?php echo $item->No_Imagen_Item;?>" class="img-thumbnail border-0 float-start" alt="<?php echo urlencode($item->No_Producto); ?>">-->
-            
+          <div class="col-md-6">            
             <div class="h-100 bg-white p-4 rounded shadow-sm">
               <?php
               $imgSvg = '';
@@ -62,9 +60,9 @@
           <div class="col-md-6">
             <div class="ps-lg-10 mt-6 mt-md-0 bg-white p-4 rounded shadow-sm">
               <!-- content -->
-              <a href="#!" class="mb-4 d-block">Bakery Biscuits</a>
+              <a href="#!" class="mb-4 d-block"><?php echo $item->No_Familia; ?></a>
               <!-- heading -->
-              <h1 class="mb-1">Napolitanke Ljesnjak</h1>
+              <h2 class="mb-1 fw-semibold"><?php echo $item->No_Producto; ?></h2>
               <div class="mt-2">
                 <div class="fw-bold">Precio china: <?php echo $arrImportacionGrupalProducto[0]->No_Signo . ' ' . $item->precio_item; ?></div>
                 <div class="fw-bold">Precio Perú: <?php echo $arrImportacionGrupalProducto[0]->No_Signo . ' ' . $item->precio_item_2; ?></div>

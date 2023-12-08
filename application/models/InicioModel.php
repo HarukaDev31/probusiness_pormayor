@@ -199,11 +199,13 @@ ITEM.Ss_Precio_Importacion_2 AS precio_item_2,
 ITEM.Nu_Activar_Item_Lae_Shop AS estado_item,
 ITEM.Txt_Producto,
 ITEM.Qt_Pedido_Minimo_Proveedor,
-ITEM.Txt_Url_Video_Lae_Shop
+ITEM.Txt_Url_Video_Lae_Shop,
+F.No_Familia
 FROM
 producto AS ITEM
 JOIN unidad_medida AS UM ON(UM.ID_Unidad_Medida = ITEM.ID_Unidad_Medida)
 JOIN unidad_medida AS UM2 ON(UM2.ID_Unidad_Medida = ITEM.ID_Unidad_Medida_Precio)
+JOIN familia AS F ON(F.ID_Familia = ITEM.ID_Familia)
 WHERE ITEM.ID_Producto = " . $arrParams['ID_Producto'];
 
         if ( !$this->db->simple_query($query) ){
