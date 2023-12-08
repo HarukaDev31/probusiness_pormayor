@@ -25,7 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/slick/slick.css?ver=17.10.14"); ?>">
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url("assets/slick/slick-theme.css?ver=17.10.14"); ?>">
 
-    <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/style.css?ver=52.0.0'; ?>">
+    <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/style.css?ver=53.0.0'; ?>">
 
     <meta name="theme-color" content="#FF6700">
 		<meta name="msapplication-navbutton-color" content="#FF6700"/>

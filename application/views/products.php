@@ -8,8 +8,8 @@
               <!-- breadcrumb -->
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url('inicio'); ?>">Inicio</a></li>
-                    <li class="breadcrumb-item"><a href="#"><?php echo $item->No_Familia; ?></a></li>
+                    <li class="breadcrumb-item"><a class="text-decoration-none" href="<?php echo base_url('inicio'); ?>">Inicio</a></li>
+                    <li class="breadcrumb-item"><a class="text-decoration-none" href="#"><?php echo $item->No_Familia; ?></a></li>
 
                     <li class="breadcrumb-item active" aria-current="page"><?php echo $item->No_Producto; ?></li>
                 </ol>
@@ -60,11 +60,11 @@
           <div class="col-md-6">
             <div class="ps-lg-10 mt-6 mt-md-0 bg-white p-4 rounded shadow-sm">
               <!-- content -->
-              <a href="#!" class="mb-4 d-block"><?php echo $item->No_Familia; ?></a>
+              <div class="mb-2"><a class="text-decoration-none" href="#!" class="mb-4 d-block"><?php echo $item->No_Familia; ?></a></div>
               <!-- heading -->
               <h2 class="mb-1 fw-semibold"><?php echo $item->No_Producto; ?></h2>
               <div class="mt-2">
-                <div class="fw-bold">Precio china: <?php echo $arrImportacionGrupalProducto[0]->No_Signo . ' ' . $item->precio_item; ?></div>
+                <div class="fw-bold">Precio China: <?php echo $arrImportacionGrupalProducto[0]->No_Signo . ' ' . $item->precio_item; ?></div>
                 <div class="fw-bold">Precio Perú: <?php echo $arrImportacionGrupalProducto[0]->No_Signo . ' ' . $item->precio_item_2; ?></div>
               </div>
               <!-- hr -->

@@ -116,7 +116,7 @@
                 </h5>
                 
                 <div class="mt-2">
-                  <div class="fw-bold">Precio china: <?php echo $row->No_Signo . ' ' . $row->precio_item; ?></div>
+                  <div class="fw-bold">Precio China: <?php echo $row->No_Signo . ' ' . $row->precio_item; ?></div>
                   <div class="fw-bold">Precio Perú: <?php echo $row->No_Signo . ' ' . $row->precio_item_2; ?></div>
                 </div>
                 
