@@ -13,7 +13,7 @@
         }
         ?>
         
-        <div class="d-flex">
+        <div class="d-flex <?php echo $sClassCartShopHidden; ?>">
           <div class="mb-3 mt-2 mt-sm-0">
             <button type="button" id="btn-user" class="btn btn-success btn-lg me-3" data-bs-toggle="modal" data-bs-target="#modalUser">
               <div class="d-none d-sm-block"><i class="fa-solid fa-user"></i>&nbsp; Ingresar</div>
@@ -22,7 +22,7 @@
           </div>
 
           <div class="position-relative mt-3 mt-sm-2 me-2">
-            <button type="button" id="icon-ver-cart_shop" class="btn btn-none position-relative p-0 m-0 <?php echo $sClassCartShopHidden; ?>" data-bs-toggle="modal" data-bs-target="#modal_cart_shop">
+            <button type="button" id="icon-ver-cart_shop" class="btn btn-none position-relative p-0 m-0" data-bs-toggle="modal" data-bs-target="#modal_cart_shop">
               <i class="fa-solid fa-bag-shopping fa-2x"></i>
               <span id="span-cart-global_cantidad" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 <?php echo (isset($_SESSION['cart']) ? countBooks($_SESSION['cart']) : '0'); ?>
