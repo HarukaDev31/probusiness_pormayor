@@ -10,8 +10,12 @@
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a class="text-decoration-none" href="<?php echo base_url('inicio'); ?>">Inicio</a></li>
                     <li class="breadcrumb-item"><a class="text-decoration-none" href="#"><?php echo $item->No_Familia; ?></a></li>
-
-                    <li class="breadcrumb-item active" aria-current="page"><?php echo $item->No_Producto; ?></li>
+                    <li class="breadcrumb-item active d-none d-sm-block" aria-current="page">
+                      <?php echo $item->No_Producto; ?>
+                    </li>
+                    <li class="breadcrumb-item active d-block d-sm-none" aria-current="page">
+                      <?php echo substr($item->No_Producto,0,14) . '..'; ?>
+                    </li>
                 </ol>
               </nav>
           </div>
