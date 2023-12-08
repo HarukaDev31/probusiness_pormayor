@@ -181,4 +181,56 @@ Nu_Orden;";
         'message' => 'No hay registros'
         );
     }
+
+    public function getItem( $arrParams ){
+		$query = "SELECT
+ITEM.ID_Producto,
+ITEM.No_Producto,
+ITEM.No_Imagen_Item,
+ITEM.Nu_Version_Imagen,
+ITEM.ID_Unidad_Medida,
+ITEM.ID_Unidad_Medida_Precio AS ID_Unidad_Medida_2,
+UM.No_Unidad_Medida,
+ITEM.Qt_Unidad_Medida AS cantidad_item,
+ITEM.Ss_Precio_Importacion AS precio_item,
+UM2.No_Unidad_Medida AS No_Unidad_Medida_2,
+ITEM.Qt_Unidad_Medida_2 AS cantidad_item_2,
+ITEM.Ss_Precio_Importacion_2 AS precio_item_2,
+ITEM.Nu_Activar_Item_Lae_Shop AS estado_item,
+ITEM.Txt_Producto,
+ITEM.Qt_Pedido_Minimo_Proveedor,
+ITEM.Txt_Url_Video_Lae_Shop
+FROM
+producto AS ITEM
+JOIN unidad_medida AS UM ON(UM.ID_Unidad_Medida = ITEM.ID_Unidad_Medida)
+JOIN unidad_medida AS UM2 ON(UM2.ID_Unidad_Medida = ITEM.ID_Unidad_Medida_Precio)
+WHERE ITEM.ID_Producto = " . $arrParams['ID_Producto'];
+
+        if ( !$this->db->simple_query($query) ){
+            $error = $this->db->error();
+            return array(
+                'status' => 'danger',
+                'message' => 'Problemas al obtener datos',
+                'code_sql' => $error['code'],
+                'message_sql' => $error['message'],
+                'sql' => $query,
+            );
+        }
+
+        $arrResponseSQL = $this->db->query($query);
+        if ( $arrResponseSQL->num_rows() > 0 ){
+            $result = $arrResponseSQL->row();
+            $result->imagenes = $this->getProductoImagen($result->ID_Producto);
+            return array(
+                'status' => 'success',
+                'message' => 'Si hay registros',
+                'result' => $result
+            );
+        }
+
+        return array(
+        'status' => 'warning',
+        'message' => 'No hay registros'
+        );
+    }
 }

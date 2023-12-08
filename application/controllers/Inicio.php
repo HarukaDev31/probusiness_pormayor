@@ -166,4 +166,35 @@ class Inicio extends CI_Controller {
 		$this->load->view('footer_data');
 		$this->load->view('footer');
 	}
+
+	public function products(){
+		$arrParams = array();
+		$arrImportacionGrupalProducto = $this->InicioModel->getImportacionGrupalProducto($arrParams);
+
+		$id_item = (!empty($this->uri->segment(2)) ? $this->uri->segment(2) : 0);
+		//$id_item=0;
+		if($id_item>0) {
+			//buscar item
+			$arrParams = array(
+				'ID_Producto' => $id_item
+			);
+			$arrItem = $this->InicioModel->getItem($arrParams);
+
+			if ($arrItem['status']=='success') {
+				$this->load->view('header');
+				$this->load->view('menu', array('arrImportacionGrupalProducto' => $arrImportacionGrupalProducto));
+				$arrImportacionGrupalProducto = $arrImportacionGrupalProducto['result'];
+				$this->load->view('products', array(
+					'arrImportacionGrupalProducto' => $arrImportacionGrupalProducto,
+					'item' => $arrItem['result']
+				));
+				$this->load->view('footer_data');
+				$this->load->view('footer');
+			} else {
+				redirect('Inicio', 'index');
+			}
+		} else {
+			redirect('Inicio', 'index');
+		}
+	}
 }
