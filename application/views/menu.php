@@ -15,7 +15,10 @@
         
         <div class="d-flex">
           <div class="mb-3 mt-2 mt-sm-0">
-            <button type="button" id="btn-user" class="btn btn-success btn-lg me-3" data-bs-toggle="modal" data-bs-target="#modalUser"><i class="fa-solid fa-user"></i>&nbsp; Ingresar</button>
+            <button type="button" id="btn-user" class="btn btn-success btn-lg me-3" data-bs-toggle="modal" data-bs-target="#modalUser">
+              <div class="d-none d-sm-block"><i class="fa-solid fa-user"></i>&nbsp; Ingresar</div>
+              <div class="d-block d-sm-none">Ingresar</div>
+            </button>
           </div>
 
           <div class="position-relative mt-3 mt-sm-2 me-2">
