@@ -61,7 +61,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title fw-bold" id="">Iniciar sesión</h5>
+          <h4 class="modal-title fw-bold" id="">Iniciar sesión</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -88,7 +88,7 @@
             </div>
             
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3">
-              <button type="button" class="btn btn-primary btn-lg btn-block" style="width: 100%;">Crear cuenta</button>
+              <button type="button" class="btn btn-success btn-lg btn-block" style="width: 100%;">Crear cuenta</button>
             </div>
           </div>
         </div>
