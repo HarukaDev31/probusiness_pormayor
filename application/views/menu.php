@@ -60,7 +60,7 @@
   <div class="modal fade" id="modalUser" tabindex="-1" aria-labelledby="modalUser" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header border-0">
           <h4 class="modal-title fw-bold" id="">Iniciar sesión</h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -83,7 +83,7 @@
               </div>
             </div>
 
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 mt-4">
               <button type="button" class="btn btn-secondary btn-lg btn-block" style="width: 100%;">Iniciar Sesión</button>
             </div>
             
