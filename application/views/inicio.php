@@ -46,7 +46,17 @@
   <?php
   if($arrCategorias['status']=='success'){
   ?>
-  <div class="container mb-2 mt-5">
+  <div class="container mb-2 mt-4">
+    <div class="home-div-card mv espacio-total p-0 py-3 px-3 mb-4">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="p-0 m-0">
+            <span class="fw-bold">Categorías</span>
+          </h4>
+        </div>
+      </div>
+    </div>
+
     <div class="carro px-2">
       <?php $iCounter = 0;
       foreach($arrCategorias['result'] as $row) {
@@ -83,6 +93,16 @@
 
   <!--productos-->
   <div class="container mt-3">
+    <div class="home-div-card mv espacio-total p-0 py-3 px-3 mb-1">
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="p-0 m-0">
+            <span class="fw-bold">Novedades</span>
+          </h4>
+        </div>
+      </div>
+    </div>
+
     <?php
     if ($arrImportacionGrupalProducto['status'] == 'success') {
       $arrImportacionGrupalProducto = $arrImportacionGrupalProducto['result'];
@@ -98,7 +118,7 @@
               <div class="card border-0 rounded shadow-sm mt-3 p-3">
                 <img src="<?php echo $row->No_Imagen_Item; ?>" class="img-thumbnail border-0 float-start" alt="<?php echo urlencode($row->No_Producto); ?>">
 
-                <h6 class="card-title mt-3 fw-bold name_item height-titulo_item">
+                <h6 class="card-title mt-3 fw-normal name_item height-titulo_item">
                   <?php echo $row->No_Producto; ?>
                 </h6>
                 
