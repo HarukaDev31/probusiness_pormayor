@@ -14,8 +14,8 @@
         ?>
         
         <div class="d-flex <?php echo $sClassCartShopHidden; ?>">
-          <div class="mb-3 mt-2 mt-sm-0">
-            <button type="button" id="btn-user" class="btn btn-success btn-lg me-3" data-bs-toggle="modal" data-bs-target="#modalUser">
+          <div class="mb-3 mt-3 mt-sm-1">
+            <button type="button" id="btn-user" class="btn btn-success me-3" data-bs-toggle="modal" data-bs-target="#modalUser">
               <div class="d-none d-sm-block"><i class="fa-solid fa-user"></i>&nbsp; Ingresar</div>
               <div class="d-block d-sm-none">Ingresar</div>
             </button>
