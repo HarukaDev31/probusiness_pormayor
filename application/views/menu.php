@@ -84,11 +84,11 @@
             </div>
 
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3 mt-4">
-              <button type="button" class="btn btn-secondary btn-lg btn-block" style="width: 100%;">Iniciar Sesión</button>
+              <button type="button" class="w-100 btn btn-secondary btn-lg btn-block">Iniciar Sesión</button>
             </div>
             
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-3">
-              <button type="button" class="btn btn-success btn-lg btn-block" style="width: 100%;">Crear cuenta</button>
+              <a type="button" href="<?php echo base_url("account/register"); ?>" target="" rel="noopener noreferrer" class="w-100 btn btn-success btn-lg btn-block">Crear cuenta</a>
             </div>
           </div>
         </div>
