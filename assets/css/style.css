@@ -475,3 +475,11 @@ z-index: 2;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
+
+.height-titulo_item{
+    height: 36px !important;
+}
+
+.breadcrumb{
+    font-size: .75rem;
+}

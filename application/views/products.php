@@ -14,7 +14,7 @@
                       <?php echo $item->No_Producto; ?>
                     </li>
                     <li class="breadcrumb-item active d-block d-sm-none" aria-current="page">
-                      <?php echo substr($item->No_Producto,0,14) . '..'; ?>
+                      <?php echo (strlen(trim($item->No_Producto)) > 30 ? substr($item->No_Producto,0,30) . '..' : $item->No_Producto); ?>
                     </li>
                 </ol>
               </nav>
@@ -66,7 +66,7 @@
               <!-- content -->
               <div class="mb-2"><a class="text-decoration-none" href="#!" class="mb-4 d-block"><?php echo $item->No_Familia; ?></a></div>
               <!-- heading -->
-              <h2 class="mb-1 fw-semibold"><?php echo $item->No_Producto; ?></h2>
+              <h4 class="mb-1 fw-semibold"><?php echo $item->No_Producto; ?></h4>
               <div class="mt-2">
                 <div class="fw-bold">Precio China: <?php echo $arrImportacionGrupalProducto[0]->No_Signo . ' ' . $item->precio_item; ?></div>
                 <div class="fw-bold">Precio Perú: <?php echo $arrImportacionGrupalProducto[0]->No_Signo . ' ' . $item->precio_item_2; ?></div>

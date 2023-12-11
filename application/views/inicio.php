@@ -90,7 +90,7 @@
       <!-- diseño de item -->
       <div class="row">
         <?php foreach ($arrImportacionGrupalProducto as $row) {
-        //comentar
+        //comentar cloud
         //$row->No_Imagen_Item = 'https://intranet.probusiness.pe/assets/images/productos/20603287721/SCOOTER_ELECTRICO__01pn3.png';
         ?>
           <div class="col-6 col-sm-3">
@@ -98,12 +98,12 @@
               <div class="card border-0 rounded shadow-sm mt-3 p-3">
                 <img src="<?php echo $row->No_Imagen_Item; ?>" class="img-thumbnail border-0 float-start" alt="<?php echo urlencode($row->No_Producto); ?>">
 
-                <h5 class="card-title mt-3 fw-bold name_item">
+                <h6 class="card-title mt-3 fw-bold name_item height-titulo_item">
                   <?php echo $row->No_Producto; ?>
-                </h5>
+                </h6>
                 
                 <div class="mt-2">
-                  <div class="fw-bold">
+                  <div class="fw-bold d-none">
                     <div class="d-none d-sm-block">
                       Precio China: <?php echo $row->No_Signo . ' ' . $row->precio_item; ?>
                     </div>
@@ -114,10 +114,10 @@
                   </div>
                   <div class="fw-bold">
                     <div class="d-none d-sm-block">
-                      Precio Perú: <?php echo $row->No_Signo . ' ' . $row->precio_item_2; ?>
+                      Perú 🇵🇪 <?php echo $row->No_Signo . ' ' . $row->precio_item_2; ?>
                     </div>
                     <div class="d-block d-sm-none">
-                      <p class="mt-2 mb-1">Precio Perú</p>
+                      <p class="mt-2 mb-1">Perú 🇵🇪</p>
                       <?php echo $row->No_Signo . ' ' . $row->precio_item_2; ?>
                     </div>
                   </div>
